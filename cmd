@@ -121,3 +121,7 @@ mysql> SELECT *
 mysql> SELECT *
     FROM course
     WHERE course_id LIKE 'CS-___';
+
+// IN
+mysql> SELECT * FROM student
+  WHERE dept_name IN ('Comp. Sci.', 'Physics', 'Elec. Eng.');
