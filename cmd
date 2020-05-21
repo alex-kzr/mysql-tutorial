@@ -48,3 +48,26 @@ mysql> UPDATE instructor
 mysql> DELETE FROM destructor; // delete all records from table destructor
 
 mysql> DROP TABLE destructor;
+
+// SELECT
+mysql> SELECT * FROM department;
+mysql> SELECT dept_name FROM department;
+mysql> SELECT dept_name
+    FROM department
+    WHERE building = 'Watson';
+
+mysql> SELECT *
+    FROM course
+    WHERE dept_name = 'Comp. Sci.';
+
+mysql> SELECT *
+    FROM course
+    WHERE credits > 3;
+
+mysql> SELECT * 
+    FROM course
+    WHERE dept_name='Comp. Sci.' AND credits>3;
+
+mysql> SELECT * 
+    FROM course
+    WHERE dept_name='Comp. Sci.' OR credits>3;
