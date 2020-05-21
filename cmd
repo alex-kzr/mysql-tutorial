@@ -149,3 +149,12 @@ mysql> CREATE VIEW my_view
 
 mysql> SELECT * FROM my_view;
 mysql> DROP VIEW my_view;
+
+// Nested selects
+mysql> SELECT DISTINCT course_id
+  FROM section
+  WHERE semester = 'Fall' AND year= 2009 AND course_id IN (
+    SELECT course_id
+    FROM section
+    WHERE semester = 'Spring' AND year= 2010
+  ); // DISTINCT returns only different values
