@@ -71,3 +71,24 @@ mysql> SELECT *
 mysql> SELECT * 
     FROM course
     WHERE dept_name='Comp. Sci.' OR credits>3;
+
+// GROUP BY
+mysql> SELECT COUNT(course_id), dept_name
+    FROM course
+    GROUP BY dept_name;
+
+mysql> SELECT MAX(credits), dept_name
+    FROM course
+    GROUP BY dept_name;
+
+mysql> SELECT MIN(credits), dept_name
+    FROM course
+    GROUP BY dept_name;
+
+mysql> SELECT AVG(credits), dept_name
+    FROM course
+    GROUP BY dept_name;
+
+mysql> SELECT SUM(salary), dept_name
+    FROM instructor
+    GROUP BY dept_name;
