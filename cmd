@@ -92,3 +92,9 @@ mysql> SELECT AVG(credits), dept_name
 mysql> SELECT SUM(salary), dept_name
     FROM instructor
     GROUP BY dept_name;
+
+// HAVING
+mysql> SELECT COUNT(course_id), dept_name
+    FROM course
+    GROUP BY dept_name
+    HAVING COUNT(course_id) > 1; // we can't use WHERE while using agregate functions
