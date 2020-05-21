@@ -11,3 +11,8 @@ sudo apt install phpmyadmin php-mbstring php-gettext // install phpmyadmin
 
 sudo mysql // run mysql console with root user
 
+// create DB and fill with data
+mysql> CREATE DATABASE university; // create university DB
+mysql> USE university; // change DB to university
+mysql> SOURCE DLL.sql; // load script
+mysql> SOURCE InsertStatements.sql; // load script
