@@ -125,3 +125,18 @@ mysql> SELECT *
 // IN
 mysql> SELECT * FROM student
   WHERE dept_name IN ('Comp. Sci.', 'Physics', 'Elec. Eng.');
+
+// JOIN
+mysql> SELECT * FROM course 
+    JOIN department 
+    ON course.dept_name = department.dept_name;
+
+mysql> SELECT prereq.course_id, title, dept_name, credits, prereq_id
+    FROM prereq
+    LEFT OUTER JOIN course
+    ON prereq.course_id=course.course_id;
+
+mysql> SELECT course.course_id, title, dept_name, credits, prereq_id
+    FROM prereq
+    RIGHT OUTER JOIN course
+    ON prereq.course_id=course.course_id;
