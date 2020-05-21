@@ -20,5 +20,31 @@ mysql> SOURCE InsertStatements.sql; // load script
 // work with DB
 mysql> SHOW DATABASES;
 mysql> CREATE DATABASE test;
+mysql> USE test;
 mysql> SOURCE test.sql;
 mysql> DROP DATABASE test;
+
+// work with tables
+mysql> SHOW TABLES;
+mysql> CREATE TABLE instructor (
+  ID CHAR(5),
+  name VARCHAR(20) NOT NULL,
+  dept_name VARCHAR(20),
+  salary NUMERIC(8,2),
+  PRIMARY KEY (ID),
+  FOREIGN KEY (dept_name) REFERENCES department(dept_name)
+);
+mysql> DESCRIBE instructor; // show table description
+
+mysql> SELECT * FROM instructor; // select all records with all columns from table instructor
+
+mysql> INSERT INTO instructor (ID, name, dept_name, salary)
+    VALUES ('55555', 'Zilberdoich', 'Biology', '150000.5'); // insert new record into table instructor
+
+mysql> UPDATE instructor
+    SET salary = '200000'
+    WHERE ID = '55555'; //  
+
+mysql> DELETE FROM destructor; // delete all records from table destructor
+
+mysql> DROP TABLE destructor;
