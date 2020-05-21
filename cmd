@@ -98,3 +98,17 @@ mysql> SELECT COUNT(course_id), dept_name
     FROM course
     GROUP BY dept_name
     HAVING COUNT(course_id) > 1; // we can't use WHERE while using agregate functions
+
+// ORDER BY
+mysql> SELECT *
+    FROM course
+    ORDER BY credits; // ordered ASC by default
+
+mysql> SELECT *
+    FROM course
+    ORDER BY credits DESC;
+
+// BETWEEN
+mysql> SELECT *
+    FROM instructor
+    WHERE salary BETWEEN 50000 AND 100000;
