@@ -112,3 +112,12 @@ mysql> SELECT *
 mysql> SELECT *
     FROM instructor
     WHERE salary BETWEEN 50000 AND 100000;
+
+// LIKE
+mysql> SELECT *
+    FROM course
+    WHERE title LIKE '%to%';
+
+mysql> SELECT *
+    FROM course
+    WHERE course_id LIKE 'CS-___';
