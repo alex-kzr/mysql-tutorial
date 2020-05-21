@@ -16,3 +16,9 @@ mysql> CREATE DATABASE university; // create university DB
 mysql> USE university; // change DB to university
 mysql> SOURCE DLL.sql; // load script
 mysql> SOURCE InsertStatements.sql; // load script
+
+// work with DB
+mysql> SHOW DATABASES;
+mysql> CREATE DATABASE test;
+mysql> SOURCE test.sql;
+mysql> DROP DATABASE test;
