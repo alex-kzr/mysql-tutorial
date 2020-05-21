@@ -140,3 +140,12 @@ mysql> SELECT course.course_id, title, dept_name, credits, prereq_id
     FROM prereq
     RIGHT OUTER JOIN course
     ON prereq.course_id=course.course_id;
+
+// VIEW
+mysql> CREATE VIEW my_view
+    AS SELECT *
+    FROM course
+    WHERE credits = 3;
+
+mysql> SELECT * FROM my_view;
+mysql> DROP VIEW my_view;
